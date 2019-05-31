@@ -1,0 +1,28 @@
+makeCacheMatrix <- function(x = matrix()) {
+  in <- NULL
+  set <- function(y) {
+    x <<- y
+    in <<- NULL
+  }
+  get <- function() x
+  set <- function(inverse) in <<- inverse
+  get <- function() in
+  list(set = set, get = get, setin = setin, getin = getin)
+}
+
+}
+
+
+cacheSolve <- function(x, ...) {
+  in <- NULL
+  set <- function(y) {
+    x <<- y
+    inv <<- NULL
+  }
+  get <- function() x
+  setin <- function(inverse) in <<- inverse
+  getin <- function() in
+  list(set = set, get = get, setin = setin, getin = getin)
+}
+
+}
